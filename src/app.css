@@ -1,0 +1,77 @@
+.App{
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(137, 217, 218);
+}
+
+.score{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px;
+}
+
+.InputLetters{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.lineBreak {
+  flex-basis: 100%;
+  height: 0;
+}
+
+.KeyboardContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+
+    flex-wrap: wrap;
+}
+
+.Keyboard{
+    width: 30px;
+    height: 30px;
+    color: white;
+    background-color: rgb(255, 0, 136);
+    font-size: medium;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Keyboard:hover{
+    cursor: pointer;
+    background-color: royalblue;
+}
+.submission{
+    width: 100px;
+    height: 40px;
+    color: white;
+    background-color: rgb(255, 0, 136);
+    font-size: medium;
+    border-radius: 10px;
+    border: none;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.submission:hover{
+    cursor: pointer;
+    background-color: royalblue;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}

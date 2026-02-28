@@ -27,8 +27,18 @@ function checkWord(){
     setAlphabet([]);
   }
   else{
+    setWrong(wrong+1);
+    if(wrong==2){
+      alert("Game Over");
+      setWrong(0);
+      setScore(score-5);
+      setAlphabet([]);
+      setWord(pickRandomWord());
+    }
+    else{
     setScore(score-2);
     setAlphabet([]);
+    }
   }
 }
 
@@ -36,6 +46,9 @@ function removelast(){
   let newWord=alphabet.slice(0,-1);
   setAlphabet(newWord);
 }
+
+
+const[wrong, setWrong] = useState(0);
 const wordsList=[
   {word: "APPLE", description: "It is Fruit in Red Color"},
   {word: "MANGO", description: "It is Fruit in Yellow Color and is available in Summer"},
@@ -86,6 +99,16 @@ const [score, setScore] = useState(0);
       </div>
       <button className='submission' onClick={removelast}>REMOVE</button>
       <button className='submission' onClick={checkWord}>SUBMIT</button>
+
+      <div className='rules'>
+        <h2>GAME RULES:</h2>
+        <ul>
+          <li>Guess the word by clicking on the keyboard letters.</li>
+          <li>Each correct guess earns 10 points.</li>
+          <li>Each wrong guess deducts 2 points.</li>
+          <li>If you make 3 wrong guesses, the game ends and you lose 5 points.</li>
+        </ul>
+      </div>
     </div>
     </>
   )
